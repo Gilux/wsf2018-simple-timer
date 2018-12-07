@@ -1,0 +1,66 @@
+*,*:before,*:after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-image: url("../images/medals.jpg");
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+
+      height: 100vh;
+      width: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      font-family: Lato;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 3rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 60px;
+    }
+
+    p.module {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+
+    .timer {
+      font-size: 8rem;
+      margin-top: 50px;
+      font-weight: 400;
+    }
+
+    button {
+      background-color: transparent;
+      display: inline-block;
+      outline: none;
+      padding: 10px;
+      border: 1px solid white;
+      width: 200px;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .controls {
+      display: flex;
+      flex-flow: row nowrap;
+    }
