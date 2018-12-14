@@ -1,6 +1,6 @@
 # Timer WSF18 - Version entraînement
 
-## Consignes :
+## Idées d'amélioration :
 - Permettre de rendre le message personnalisable à la création du timer :
 ```js
 new Timer(document.querySelector("#test"), 3600, "Mon Super Timer")
