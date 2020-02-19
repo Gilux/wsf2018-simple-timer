@@ -11,9 +11,9 @@ class Timer {
     this.date_paused = null
 
     // On ajoute les écouteurs sur les 3 boutons du composant
-    this.$el.querySelector('.pause').addEventListener("click", () => { this.pause() })
-    this.$el.querySelector('.play').addEventListener("click", () => { this.play() })
-    this.$el.querySelector('.add').addEventListener("click", () => { this.addTime(60) })
+    // this.$el.querySelector('.pause').addEventListener("click", () => { this.pause() })
+    // this.$el.querySelector('.play').addEventListener("click", () => { this.play() })
+    // this.$el.querySelector('.add').addEventListener("click", () => { this.addTime(60) })
   }
 
   // Initialise le timer
@@ -97,6 +97,10 @@ class Timer {
 
     // On évite d'entrer dans le négatif lors de la dernière seconde du timer
     dDiff.setTime(Math.max(0, dDiff.getTime()))
+
+    if(dDiff.getTime() <= 0) {
+
+    }
 
     // Mettre à jour l'affichage
     this.updateDOM(dDiff)

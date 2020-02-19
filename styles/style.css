@@ -5,7 +5,8 @@
     }
 
     body {
-      background-image: url("../images/medals.jpg");
+      /* background-image: url("../images/medals.jpg"); */
+      background-image: url("https://hungarytoday.hu/wp-content/uploads/2018/10/D_KOS20180925025.jpg");
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -39,12 +40,12 @@
     }
 
     p.module {
-      font-size: 3rem;
+      font-size: 1.5rem;
       margin-bottom: 0;
     }
 
     .timer {
-      font-size: 8rem;
+      font-size: 5rem;
       margin-top: 50px;
       font-weight: 400;
     }
@@ -63,4 +64,24 @@
     .controls {
       display: flex;
       flex-flow: row nowrap;
+    }
+
+    .timers {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 100px;
+    }
+
+    .timer-block {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    .separator {
+      width: 1px;
+      height: 100%;
+      border: 1px solid white;
+
     }

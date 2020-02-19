@@ -6,28 +6,49 @@
   <title>WSFR Timer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="overlay" id="timer-component">
-    <p>🏅 45<sup>èmes</sup> Olympiades des Métiers - Web Design 🏅</p>
-    <p class="module">🔥🔥🔥 SPEED MODULE 🔥🔥🔥</p>
-    <div class="timer">
-      00:00:00
+    <p>🏅 Road To Graz 🏅</p>
+    <div class="timers">
+      <div id="timer-component" class="timer-block">
+        <p class="module">Module C (Budapest 2018)</p>
+        <div class="timer">
+          00:00:00
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div id="timer-component2" class="timer-block">
+        <p class="module">Module HTML/CSS</p>
+        <div class="timer">
+          00:00:00
+        </div>
+      </div>
     </div>
-
-    <div class="controls">
+      
+    <!-- <div class="controls">
       <button class="pause">Pause</button>
       <button class="play">Play</button>
       <button class="add">Add 1mn</button>
-    </div>
+    </div> -->
   </div>
 
+  <script src="scripts/moment.js"></script>
   <script src="scripts/Timer.js"></script>
   <script>
+    const endTime = new moment('2020-02-18 17:17:20')
+    const secondsToEnd = parseInt(endTime.diff(Date.now())/1000)
+    const endTime2 = new moment('2020-02-18 17:45:00')
+    const secondsToEnd2 = parseInt(endTime2.diff(Date.now())/1000)
+
     // Démarrer le timer au chargement de la page
     document.addEventListener("DOMContentLoaded", () => {
-      let t = new Timer(document.querySelector("#timer-component"), 3600)
+      const endTime = new Date
+      let t = new Timer(document.querySelector("#timer-component"), secondsToEnd)
+      let t2 = new Timer(document.querySelector("#timer-component2"), secondsToEnd2)
       t.start()
+      t2.start()
     })
   </script>
 </body>
